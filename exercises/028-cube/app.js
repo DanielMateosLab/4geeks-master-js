@@ -1,1 +1,1 @@
-// Write your function here
+const cube = number => number ** 3

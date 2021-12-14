@@ -1,2 +1,1 @@
-// Write your function here
-
+const computeAreaOfATriangle = (base, heigth) => (base * heigth) / 2

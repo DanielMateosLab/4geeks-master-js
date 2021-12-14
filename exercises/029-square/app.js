@@ -1,1 +1,1 @@
-// Write your function here
+const square = number => number **2 
