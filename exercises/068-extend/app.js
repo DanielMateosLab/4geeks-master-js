@@ -8,5 +8,9 @@ var obj2 = {
 };
 
 function extend(obj1, obj2) {
-    // your code here
+    Object.keys(obj2).forEach(key => {
+        if (obj1[key] === undefined) {
+            obj1[key] = obj2[key]
+        } 
+    })
 }

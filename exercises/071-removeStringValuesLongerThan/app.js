@@ -1,4 +1,6 @@
 function removeStringValuesLongerThan(num, obj) {
-    // your code here
-
+    Object.entries(obj).forEach(([key, value]) => {
+        if (typeof value == "string" && value.length > num)
+            delete obj[key]
+    })
 }

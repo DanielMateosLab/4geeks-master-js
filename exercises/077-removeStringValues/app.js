@@ -1,6 +1,6 @@
 function removeStringValues(obj) {
-    // your code here
+    Object.entries(obj).forEach(([key, value]) => {
+        if (typeof value == "string")
+            delete obj[key]
+    })
 }
-
-removeStringValues(obj);
-console.log(obj); // { age: 20 }

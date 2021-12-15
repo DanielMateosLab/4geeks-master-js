@@ -1,3 +1,7 @@
 function removeArrayValues(obj) {
-    // your code here
+    
+    Object.entries(obj).forEach(([key, value]) => {
+        if (Array.isArray(value))
+            delete obj[key]
+    })
 }

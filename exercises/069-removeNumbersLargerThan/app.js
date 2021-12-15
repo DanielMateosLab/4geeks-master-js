@@ -4,5 +4,9 @@ var obj = {
     c: 'montana'
 }
 function removeNumbersLargerThan(num, obj) {
-    // your code here
+    Object.entries(obj).forEach(([key, value]) => {
+        if (typeof value == "number" && value > num) {
+            delete obj[key]
+        }
+    })
 }
