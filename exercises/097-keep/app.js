@@ -1,1 +1,1 @@
-// Write your function here
+const keep = (arr, keeper) => arr.filter(elem => elem === keeper) 

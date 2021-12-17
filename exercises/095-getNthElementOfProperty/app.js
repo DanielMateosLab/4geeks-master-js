@@ -1,1 +1,1 @@
-// Write your function here
+const getNthElementOfProperty = (obj, key, n) => obj[key][n]

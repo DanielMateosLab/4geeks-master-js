@@ -1,1 +1,1 @@
-// Write your function here
+const getLastElementOfProperty = (obj, key) => obj[key][obj[key].length - 1]
