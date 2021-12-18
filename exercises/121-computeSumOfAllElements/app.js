@@ -1,5 +1,5 @@
 function computeSumOfAllElements(arr) {
-  // your code here
+  return arr.reduce((total, currNum) => total + currNum)
 }
 
 var output = computeSumOfAllElements([1, 2, 3])

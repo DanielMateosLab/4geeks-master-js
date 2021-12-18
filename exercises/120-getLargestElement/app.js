@@ -1,5 +1,5 @@
 function getLargestElement(arr) {
-  // your code here
+  return arr.length
+    ? arr.reduce((prevNum, currNum) => currNum > prevNum ? currNum : prevNum)
+    : 0
 }
-var output = getLargestElement([5, 2, 8, 3]);
-console.log(output); // --> 8;

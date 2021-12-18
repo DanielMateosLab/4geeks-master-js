@@ -1,5 +1,5 @@
 function getLongestElement(arr) {
-    // your code here
+  return arr.length
+    ? arr.reduce((prevWord, currWord) => currWord.length > prevWord.length ? currWord : prevWord)
+    : ""
 }
-var output = getLongestElement(['one', 'two', 'three']);
-console.log(output); // --> 'three'

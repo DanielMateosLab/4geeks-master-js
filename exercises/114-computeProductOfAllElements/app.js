@@ -1,6 +1,7 @@
 function computeProductOfAllElements(arr) {
-    // your code here
-}
+    if (!arr.length) return 0
 
-var output = computeProductOfAllElements([2, 5, 6]);
-console.log(output); // --> 60
+    return arr.reduce(
+        (prevVal, currVal) => prevVal * currVal
+    )
+}

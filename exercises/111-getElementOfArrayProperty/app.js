@@ -1,6 +1,7 @@
-var obj = {
- key: ['Jamil', 'Albrey']
-};
+
+
 function getElementOfArrayProperty(obj, key, index) {
-    // your code here
+    const arr = obj[key]
+
+    return Array.isArray(arr) ? arr[index] : undefined
 }
