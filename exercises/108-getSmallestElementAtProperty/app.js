@@ -1,8 +1,11 @@
-var obj = {
-  key: [2, 1, 5]
-};
 function getSmallestElementAtProperty(obj, key) {
-    // your code here
+  const arr = obj[key]
+
+  if (!Array.isArray(arr)) return undefined
+
+  if (!arr.length) return []
+  
+  return arr.reduce(
+    (prevNum, currNum) => prevNum > currNum
+  )
 }
-var output = getSmallestElementAtProperty(obj, 'key');
-console.log(output); // --> 1

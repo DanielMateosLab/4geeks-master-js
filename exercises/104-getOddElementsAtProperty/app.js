@@ -1,10 +1,7 @@
-var obj = {
-  key: [1, 2, 3, 4, 5]
-};
-
 function getOddElementsAtProperty(obj, key) {
-    // your code here
-}
+  const arr = obj[key]
 
-var output = getOddElementsAtProperty(obj, 'key');
-console.log(output); // --> [1, 3, 5]
+  if (!Array.isArray(arr)) return []
+
+  return arr.filter(elem => elem % 2 !== 0)
+}

@@ -1,10 +1,7 @@
-var obj = {
-  key: [2, 1, 5]
-};
-
 function getSquaredElementsAtProperty(obj, key) {
-    // your code here
-}
+  const arr = obj[key]
 
-var output = getSquaredElementsAtProperty(obj, 'key');
-console.log(output); // --> [4, 1, 25]
+  if (!Array.isArray(arr)) return []
+
+  return arr.map(num => num ** 2)
+}

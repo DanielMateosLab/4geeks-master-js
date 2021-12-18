@@ -1,9 +1,8 @@
-var obj = {
-  key: ['a', 'long', 'game']
-};
-function getEvenLengthWordsAtProperty(obj, key) {
-    // your code here
-}
 
-var output = getEvenLengthWordsAtProperty(obj, 'key');
-console.log(output); // --> ['long', 'game']
+function getEvenLengthWordsAtProperty(obj, key) {
+  const arr = obj[key]
+
+  if (!Array.isArray(arr)) return []
+
+  return arr.filter(elem => elem.length % 2 == 0)
+}

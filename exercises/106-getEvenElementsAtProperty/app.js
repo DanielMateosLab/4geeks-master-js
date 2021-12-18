@@ -1,10 +1,7 @@
-
-var obj = {
-  key: [1000, 11, 50, 17]
-};
-
 function getEvenElementsAtProperty(obj, key) {
-    // your code here
+  const arr = obj[key]
+
+  if (!Array.isArray(arr)) return []
+
+  return arr.filter(elem => elem % 2 === 0)
 }
-var output = getEvenElementsAtProperty(obj, 'key');
-console.log(output); // --> [1000, 50]
