@@ -1,6 +1,7 @@
 function getStringLength(string) {
-    // your code here
-}
+    let length = 0
+    
+    string.split("").forEach(() => length++)
 
-var output = getStringLength('hello');
-console.log(output); // --> 5
+    return length
+}

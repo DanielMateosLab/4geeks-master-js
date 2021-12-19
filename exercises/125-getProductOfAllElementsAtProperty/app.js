@@ -1,9 +1,7 @@
-var obj = {
-  key: [1, 2, 3, 4]
-};
-
 function getProductOfAllElementsAtProperty(obj, key) {
-    // your code here
+  const arr = obj[key]
+
+  if (!Array.isArray(arr) || !arr.length) return 0
+  
+  return arr.reduce((total, currNum) => total * currNum)
 }
-var output = getProductOfAllElementsAtProperty(obj, 'key');
-console.log(output); // --> 24
