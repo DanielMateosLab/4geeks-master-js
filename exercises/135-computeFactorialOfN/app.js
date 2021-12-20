@@ -1,7 +1,9 @@
 function computeFactorialOfN(n) {
-    // your code here
+    let sequientialNumbers = []
+
+    for (let i = n; i > 0; i--) {
+        sequientialNumbers.push(i)
+    }
+
+    return sequientialNumbers.reduce((total, currNum) => total * currNum)
 }
-
-var output = computeFactorialOfN(3); console.log(output); // --> 6
-
-var output = computeFactorialOfN(4); console.log(output); // --> 24

@@ -1,6 +1,5 @@
 function fromListToObject(array) {
-  // your code here
+  return array
+    .map(el => ({ [el[0]]: el[1] }))
+    .reduce((result, currObj) => ({...result, ...currObj}))
 }
-
-let output = fromListToObject([['make', 'Ford'], ['model', 'Mustang'], ['year', 1964]])
-console.log(ouput) // => { make: 'Ford', model: 'Mustang', year: 1964 }

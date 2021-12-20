@@ -1,5 +1,3 @@
-function findShortestOfThreeWords(word1, word2, word3) {
-    // your code here
+function findShortestOfThreeWords(...words) {
+    return words.reduce((result, currWord) => currWord.length < result.length ? currWord : result)
 }
-var output = findShortestOfThreeWords('a', 'two', 'three');
-console.log(output); // --> 'a'

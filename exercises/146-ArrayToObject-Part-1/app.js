@@ -1,3 +1,3 @@
 function transformFirstAndLast(array) {
-  // your code here
+  return { [array.shift()]: array.pop() }
 }

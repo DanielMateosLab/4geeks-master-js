@@ -1,3 +1,9 @@
 function listAllValues(obj) {
-  // your code here
+  const values = []
+
+  for (const key in obj) {
+    values.push(obj[key])
+  }
+
+  return values
 }

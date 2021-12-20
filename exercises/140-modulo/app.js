@@ -1,6 +1,7 @@
 function modulo(num1, num2) {
-    // your code here
-}
+    const divisionResult = Math.abs(num1 / num2)
+    const decimalPart = divisionResult - Math.floor(divisionResult)
+    const reminder = decimalPart * num2
 
-var output = modulo(25, 4);
-console.log(output); // --> 1
+    return num1 < 0 ? -reminder : reminder
+}

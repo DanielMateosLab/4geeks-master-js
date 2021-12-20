@@ -1,5 +1,8 @@
 function findShortestWordAmongMixedElements(arr) {
-    // your code here
+    const wordsArray = arr.filter(el => typeof el === "string")
+    const shortestWordReducer = (result, currWord) => currWord.length < result.length ? currWord : result
+    
+    return wordsArray.length
+        ? wordsArray.reduce(shortestWordReducer)
+        : ""
 }
-var output = findShortestWordAmongMixedElements([4, 'two', 2, 'three']);
-console.log(output); // --> 'two'

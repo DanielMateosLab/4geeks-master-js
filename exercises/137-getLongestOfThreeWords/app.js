@@ -1,6 +1,3 @@
-function getLongestOfThreeWords(word1, word2, word3) {
-    // your code here
+function getLongestOfThreeWords(...words) {
+    return words.reduce((result, currWord) => currWord.length > result.length ? currWord : result)
 }
-
-var output = getLongestOfThreeWords('these', 'three', 'words');
-console.log(output); // --> 'these'
