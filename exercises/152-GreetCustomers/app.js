@@ -14,9 +14,20 @@ var customerData = {
 };
 
 function greetCustomer(firstName) {
+  const customer = customerData[firstName]
   var greeting = '';
 	
-  // your code here
+  if (!customer) {
+    greeting = 'Welcome! Is this your first time?'
+  } else {
+    const { visits } = customer
+
+    if (visits === 1) {
+      greeting = `Welcome back, ${firstName}! We're glad you liked us the first time!`
+    } else {
+      greeting = `Welcome back, ${firstName}! So glad to see you again!`
+    }
+  }
 	
   return greeting;
 }

@@ -1,5 +1,18 @@
 function detectOutlierValue(string) {
-    // your code here
+    const numberList = string.split(" ").map(el => +el)
+
+    const evenNumbers = []
+    const oddNumbers = []
+
+    numberList.forEach(num => {
+        num % 2 === 0 ? evenNumbers.push(num) : oddNumbers.push(num)
+    })
+
+    const outlierIndex = evenNumbers.length === 1
+        ? numberList.indexOf(evenNumbers[0])
+        : numberList.indexOf(oddNumbers[0])
+    
+    return outlierIndex + 1
 }
 
 // Third number is odd, while the rest of the numbers are even
