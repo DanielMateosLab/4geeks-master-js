@@ -1,4 +1,4 @@
-function findPairForSum(array, number){
+function findPairForSum(array, number) {
     for (let iOfNum1 = 0; iOfNum1 < array.length; iOfNum1++) {
         const arrayWithoutCurrentNumber = [...array]
         const num1 = arrayWithoutCurrentNumber.splice(iOfNum1, 1)[0]

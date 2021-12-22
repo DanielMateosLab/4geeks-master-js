@@ -1,7 +1,7 @@
-function average(num1, num2) {
-  // process array of numbers
+function average(...numbers) {
+  return sum(...numbers) / numbers.length
 }
 
-function sum(numbers) {
-    
+function sum(...numbers) {
+  return numbers.reduce((total, currNum) => total + currNum)
 }
